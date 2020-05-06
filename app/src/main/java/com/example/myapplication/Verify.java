@@ -25,10 +25,9 @@ public class Verify extends AppCompatActivity {
         codeCheck = findViewById(R.id.button);
         String[] nums = {};
 
-        Random number = new Random();
-        int newNumber;
-
-        for(int i=0; i<6; i++){
+        for(int i=0; i < 6; i++){
+            Random number = new Random();
+            int newNumber;
             newNumber = number.nextInt(10);
             String codeNumber = String.valueOf(newNumber);
             nums[i] = codeNumber;
