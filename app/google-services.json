@@ -1,42 +1,34 @@
 {
   "project_info": {
-    "project_number": "912887719012",
-    "firebase_url": "https://my-application-7cc9c.firebaseio.com",
-    "project_id": "my-application-7cc9c",
-    "storage_bucket": "my-application-7cc9c.appspot.com"
+    "project_number": "882184508536",
+    "firebase_url": "https://banking-app-b29aa.firebaseio.com",
+    "project_id": "banking-app-b29aa",
+    "storage_bucket": "banking-app-b29aa.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:912887719012:android:add95df67f5fa683b76b71",
+        "mobilesdk_app_id": "1:882184508536:android:070699d304ab029ccf898d",
         "android_client_info": {
-          "package_name": "com.example.myapplication"
+          "package_name": "com.example.bankingapp"
         }
       },
       "oauth_client": [
         {
-          "client_id": "912887719012-v3se9k3ir5nc37mp1q5mk5ai0c33ish2.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.myapplication",
-            "certificate_hash": "83456d00978adac5f38554070b55490d33afb8af"
-          }
-        },
-        {
-          "client_id": "912887719012-tngj224kl3l7hg7fe9h7c78junlb99f4.apps.googleusercontent.com",
+          "client_id": "882184508536-eksb9749080il5tt0sn8vre7u3rjq8nh.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDS6uE2OAdnOFgv1oiCnAtSS0G5N1i-6q0"
+          "current_key": "AIzaSyAbiNx0nwMnd3MOxLyv8OXE3TQFOT48HMA"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "912887719012-tngj224kl3l7hg7fe9h7c78junlb99f4.apps.googleusercontent.com",
+              "client_id": "882184508536-eksb9749080il5tt0sn8vre7u3rjq8nh.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

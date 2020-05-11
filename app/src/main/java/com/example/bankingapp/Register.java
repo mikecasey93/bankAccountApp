@@ -1,4 +1,4 @@
-package com.example.myapplication;
+package com.example.bankingapp;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -29,7 +29,7 @@ public class Register extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_register2);
+        setContentView(R.layout.activity_register);
 
         mFullName = findViewById(R.id.fullName);
         mEmail = findViewById(R.id.email);
@@ -92,6 +92,6 @@ public class Register extends AppCompatActivity {
         });
 
 
-        }
     }
+}
 
