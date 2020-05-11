@@ -15,7 +15,7 @@ import java.util.Random;
 public class Verify extends AppCompatActivity {
 
     EditText codeInput;
-    Button codeCheck;
+    Button codeCheck, codeShow;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class Verify extends AppCompatActivity {
 
         codeInput = findViewById(R.id.editText);
         codeCheck = findViewById(R.id.button);
+        codeShow = findViewById(R.id.button2);
         ArrayList<String> nums = new ArrayList<String>();
         int newNumber = 0;
         String code = "";
@@ -36,7 +37,6 @@ public class Verify extends AppCompatActivity {
         for(String num:nums){
             code += num;
         }
-        Toast.makeText(Verify.this, "Your code is" + code, Toast.LENGTH_LONG).show();
 
         final String finalCode = code;
         codeCheck.setOnClickListener(new View.OnClickListener() {
@@ -60,5 +60,11 @@ public class Verify extends AppCompatActivity {
             }
         });
 
+        codeShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(Verify.this, "Your code is " + finalCode, Toast.LENGTH_LONG).show();
+            }
+        });
     }
 }
