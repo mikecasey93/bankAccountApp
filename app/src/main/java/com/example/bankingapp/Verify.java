@@ -43,7 +43,7 @@ public class Verify extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                int chances = 3;
+                int chances = 1;
 
                 String codePrompt = codeInput.getText().toString().trim();
                 if(!codePrompt.equals(finalCode)){
