@@ -11,6 +11,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +20,8 @@ public class MainActivity extends AppCompatActivity {
 
     String SHARED_PREFS = "sharedPrefs";
     String SHARED_PREFS2 = "sharedPrefs2";
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
     String userFullName = "";
     String getUserFullName = "";
     String UserName = "";
@@ -48,6 +51,14 @@ public class MainActivity extends AppCompatActivity {
                 editor2.apply();
 
                 // brings user to new activity/window
+                Intent i = new Intent(MainActivity.this, BankAccount.class);
+                startActivity(i);
+            }
+        });
+
+        btnCancel.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
                 Intent i = new Intent(MainActivity.this, BankAccount.class);
                 startActivity(i);
             }

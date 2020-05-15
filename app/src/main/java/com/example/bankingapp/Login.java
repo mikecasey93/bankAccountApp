@@ -17,14 +17,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
     EditText uEmail, uPassword;
     Button uLoginBtn;
-    TextView uCreateBtn;
+    TextView uCreateBtn, uForgotBtn;
     ProgressBar uProgressBar;
     FirebaseAuth uAuth;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,6 +39,7 @@ public class Login extends AppCompatActivity {
         uAuth = FirebaseAuth.getInstance();
         uLoginBtn = findViewById(R.id.loginbtn);
         uCreateBtn = findViewById(R.id.createText);
+        uForgotBtn = findViewById(R.id.forgot);
 
         uLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -73,6 +76,13 @@ public class Login extends AppCompatActivity {
                         }
                     }
                 });
+            }
+        });
+
+        uForgotBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(getApplicationContext(),ForgotPassword.class));
             }
         });
 

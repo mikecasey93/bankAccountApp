@@ -4,17 +4,19 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class BankAccount extends AppCompatActivity {
 
     TextView titlepage, fullName, userName, bankone, expired;
-
+    FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     Button btnEdit;
 
     String SHARED_PREFS = "sharedPrefs";
@@ -50,6 +52,7 @@ public class BankAccount extends AppCompatActivity {
     }
 
     public void loadData(){
+
         SharedPreferences sharedPreferences = getSharedPreferences(SHARED_PREFS,MODE_PRIVATE);
         SharedPreferences sharedPreferences2 = getSharedPreferences(SHARED_PREFS2,MODE_PRIVATE);
         getUserFullName = sharedPreferences.getString(userFullName, "");
