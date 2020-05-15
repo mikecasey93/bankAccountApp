@@ -47,6 +47,7 @@
         android:layout_width="360dp"
         android:layout_height="43dp"
         android:background="@drawable/btngrey"
+        android:onClick="Check"
         android:text="Verify"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

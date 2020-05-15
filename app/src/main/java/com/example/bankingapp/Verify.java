@@ -16,6 +16,8 @@ public class Verify extends AppCompatActivity {
 
     EditText codeInput;
     Button codeCheck, codeShow;
+    String finalCode;
+    int chances = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,36 +31,16 @@ public class Verify extends AppCompatActivity {
         int newNumber = 0;
         String code = "";
 
-        for(int i=0; i < 6; i++){
+        for (int i = 0; i < 6; i++) {
             Random number = new Random();
             newNumber = number.nextInt(10);
             nums.add(Integer.toString(newNumber));
         }
-        for(String num:nums){
+        for (String num : nums) {
             code += num;
         }
 
-        final String finalCode = code;
-        codeCheck.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                int chances = 1;
-
-                String codePrompt = codeInput.getText().toString().trim();
-                if(!codePrompt.equals(finalCode)){
-                    Toast.makeText(Verify.this, "Incorrect code", Toast.LENGTH_SHORT).show();
-                    chances -= 1;
-                    if(chances == 0){
-                        startActivity(new Intent(getApplicationContext(), Lockout.class));
-                    }
-                }
-                else{
-                    startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                }
-
-            }
-        });
+        finalCode = code;
 
         codeShow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -66,5 +48,19 @@ public class Verify extends AppCompatActivity {
                 Toast.makeText(Verify.this, "Your code is " + finalCode, Toast.LENGTH_LONG).show();
             }
         });
+    }
+    public void Check(View view){
+
+
+        String codePrompt = codeInput.getText().toString().trim();
+        if (!codePrompt.equals(finalCode)) {
+            Toast.makeText(Verify.this, "Incorrect code", Toast.LENGTH_SHORT).show();
+            chances -= 1;
+        }if (chances == 0) {
+                startActivity(new Intent(getApplicationContext(), Lockout.class));
+            }
+        else if(codePrompt.equals(finalCode)) {
+            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+        }
     }
 }
